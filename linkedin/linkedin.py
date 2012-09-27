@@ -155,7 +155,7 @@ class LinkedIn(object):
         query_dict = {"oauth_callback" : self._callback_url}
 
         if scope:
-            query_dict.update({'scope': scope})
+            relative_url = "%s?scope=%s" % scope
 
         query_dict = self._query_dict(query_dict)
 
